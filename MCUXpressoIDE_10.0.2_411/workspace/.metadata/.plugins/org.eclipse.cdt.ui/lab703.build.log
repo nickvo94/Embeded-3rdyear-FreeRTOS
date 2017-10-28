@@ -1,0 +1,29 @@
+10:26:40 **** Incremental Build of configuration Debug for project lab703 ****
+make -r -j4 all 
+Building file: ../src/lab703.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/lab703.d" -MT"src/lab703.o" -MT"src/lab703.d" -o "src/lab703.o" "../src/lab703.cpp"
+../src/lab703.cpp: In function 'void ReadUSBTask(void*)':
+../src/lab703.cpp:85:7: warning: unused variable 'buffer' [-Wunused-variable]
+  char buffer[60];
+       ^
+Finished building: ../src/lab703.cpp
+ 
+Building target: lab703.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="lab703.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab1_Debug.ld" -o "lab703.axf"  ./src/DigitalIOPin.o ./src/Fmutex.o ./src/ITM_write.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/lab703.o ./src/sysinit.o ./src/syslog.o   -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx -lfreertos
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       32152 B       256 KB     12.27%
+      Ram0_16_32:        2896 B        32 KB      8.84%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: lab703.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "lab703.axf"; # arm-none-eabi-objcopy -v -O binary "lab703.axf" "lab703.bin" ; # checksum -p LPC1549 -d "lab703.bin";
+   text	   data	    bss	    dec	    hex	filename
+  29672	   2480	    416	  32568	   7f38	lab703.axf
+ 
+
+10:26:41 Build Finished (took 1s.130ms)
+

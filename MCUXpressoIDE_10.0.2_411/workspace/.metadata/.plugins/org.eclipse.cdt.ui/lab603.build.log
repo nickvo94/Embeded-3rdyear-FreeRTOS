@@ -1,0 +1,29 @@
+09:49:22 **** Incremental Build of configuration Debug for project lab603 ****
+make -r -j4 all 
+Building file: ../src/lab603.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/lab603.d" -MT"src/lab603.o" -MT"src/lab603.d" -o "src/lab603.o" "../src/lab603.cpp"
+../src/lab603.cpp: In function 'void RIT_start(int, int)':
+../src/lab603.cpp:132:62: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+  sprintf(debugStr, "cmp_value = %d \r\n", (uint32_t)cmp_value);
+                                                              ^
+Finished building: ../src/lab603.cpp
+ 
+Building target: lab603.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="lab603.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab403_Debug.ld" -o "lab603.axf"  ./src/DigitalIOPin.o ./src/Fmutex.o ./src/ITM_write.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/lab603.o ./src/sysinit.o ./src/syslog.o   -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx -lfreertos
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       48720 B       256 KB     18.59%
+      Ram0_16_32:        3128 B        32 KB      9.55%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: lab603.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "lab603.axf"; # arm-none-eabi-objcopy -v -O binary "lab603.axf" "lab603.bin" ; # checksum -p LPC1549 -d "lab603.bin";
+   text	   data	    bss	    dec	    hex	filename
+  46224	   2496	    632	  49352	   c0c8	lab603.axf
+ 
+
+09:49:23 Build Finished (took 1s.130ms)
+

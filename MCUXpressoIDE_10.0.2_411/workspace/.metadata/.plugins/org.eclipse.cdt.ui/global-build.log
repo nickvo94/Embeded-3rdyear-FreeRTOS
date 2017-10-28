@@ -1,0 +1,685 @@
+10:21:27 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:21:28 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:21:29 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:21:30 **** Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+Building file: ../src/Fmutex.cpp
+Building file: ../src/cdc_main.c
+Building file: ../src/usb_cdcMdraw.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/Fmutex.d" -MT"src/Fmutex.o" -MT"src/Fmutex.d" -o "src/Fmutex.o" "../src/Fmutex.cpp"
+Invoking: MCU C Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-gcc -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/cdc_main.d" -MT"src/cdc_main.o" -MT"src/cdc_main.d" -o "src/cdc_main.o" "../src/cdc_main.c"
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/usb_cdcMdraw.d" -MT"src/usb_cdcMdraw.o" -MT"src/usb_cdcMdraw.d" -o "src/usb_cdcMdraw.o" "../src/usb_cdcMdraw.cpp"
+Finished building: ../src/Fmutex.cpp
+ 
+Finished building: ../src/cdc_main.c
+ 
+../src/usb_cdcMdraw.cpp: In function 'void send_task(void*)':
+../src/usb_cdcMdraw.cpp:63:8: warning: unused variable 'str' [-Wunused-variable]
+   char str[32];
+        ^
+Finished building: ../src/usb_cdcMdraw.cpp
+ 
+Building target: usb_cdcMdraw.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdcMdraw.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdcMdraw.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdcMdraw.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       20812 B       256 KB      7.94%
+         Ram0_16:        3820 B        16 KB     23.32%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdcMdraw.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdcMdraw.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdcMdraw.axf" "usb_cdcMdraw.bin" ; # checksum -p LPC1549 -d "usb_cdcMdraw.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18616	   2196	   1624	  22436	   57a4	usb_cdcMdraw.axf
+ 
+10:22:16 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:22:16 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:22:17 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:22:18 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:22:20 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:23:13 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:23:14 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:23:14 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:23:15 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:23:17 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:24:30 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:24:31 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:24:31 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:24:32 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:24:34 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:27:19 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:27:19 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:27:20 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:27:20 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:27:22 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:28:58 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:28:58 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:28:59 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:29:00 **** Build of configuration Debug for project usb_cdctest2 ****
+make -r -j4 all 
+Building file: ../src/Fmutex.cpp
+Building file: ../src/cdc_main.c
+Building file: ../src/usb_cdctest2.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdctest2\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/Fmutex.d" -MT"src/Fmutex.o" -MT"src/Fmutex.d" -o "src/Fmutex.o" "../src/Fmutex.cpp"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdctest2\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/cdc_main.d" -MT"src/cdc_main.o" -MT"src/cdc_main.d" -o "src/cdc_main.o" "../src/cdc_main.c"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdctest2\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/usb_cdctest2.d" -MT"src/usb_cdctest2.o" -MT"src/usb_cdctest2.d" -o "src/usb_cdctest2.o" "../src/usb_cdctest2.cpp"
+Finished building: ../src/Fmutex.cpp
+ 
+Finished building: ../src/cdc_main.c
+ 
+../src/usb_cdctest2.cpp: In function 'void send_task(void*)':
+../src/usb_cdctest2.cpp:64:7: warning: unused variable 'len' [-Wunused-variable]
+   int len = sprintf(str, "Counter: %lu runs really fast\r\n", count);
+       ^
+Finished building: ../src/usb_cdctest2.cpp
+ 
+Building target: usb_cdctest2.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdctest2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdctest2.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdctest2.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       37664 B       256 KB     14.37%
+         Ram0_16:        4184 B        16 KB     25.54%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdctest2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdctest2.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdctest2.axf" "usb_cdctest2.bin" ; # checksum -p LPC1549 -d "usb_cdctest2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  35104	   2560	   1624	  39288	   9978	usb_cdctest2.axf
+ 
+10:29:03 **** Incremental Build of configuration Debug for project usb_cdctest2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:31:10 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:31:10 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:31:11 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:31:11 **** Incremental Build of configuration Debug for project usb_cdctest2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:31:13 **** Incremental Build of configuration Debug for project usb_cdctest2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:36:41 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:36:42 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:36:42 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:36:43 **** Build of configuration Debug for project usb_cdc ****
+make -r -j4 all 
+Building file: ../src/Fmutex.cpp
+Building file: ../src/cdc_main.c
+Building file: ../src/usb_cdc.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdc\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/Fmutex.d" -MT"src/Fmutex.o" -MT"src/Fmutex.d" -o "src/Fmutex.o" "../src/Fmutex.cpp"
+Invoking: MCU C Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-gcc -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdc\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/cdc_main.d" -MT"src/cdc_main.o" -MT"src/cdc_main.d" -o "src/cdc_main.o" "../src/cdc_main.c"
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdc\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/usb_cdc.d" -MT"src/usb_cdc.o" -MT"src/usb_cdc.d" -o "src/usb_cdc.o" "../src/usb_cdc.cpp"
+Finished building: ../src/Fmutex.cpp
+ 
+../src/usb_cdc.cpp:128:17: warning: "/*" within comment [-Wcomment]
+   str[len] = 0; /* make sure we have a zero at the end so that we can print the data */
+                 ^
+Finished building: ../src/cdc_main.c
+ 
+../src/usb_cdc.cpp:68:38: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+      "On Thursday, you will see\r\n" };
+                                      ^
+../src/usb_cdc.cpp:68:38: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/usb_cdc.cpp:68:38: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/usb_cdc.cpp:68:38: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/usb_cdc.cpp:68:38: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/usb_cdc.cpp:68:38: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/usb_cdc.cpp: In function 'void send_task(void*)':
+../src/usb_cdc.cpp:92:7: warning: unused variable 'debug' [-Wunused-variable]
+  char debug[64];
+       ^
+Finished building: ../src/usb_cdc.cpp
+ 
+Building target: usb_cdc.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdc.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdc.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdc.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       21660 B       256 KB      8.26%
+         Ram0_16:        3852 B        16 KB     23.51%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdc.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdc.axf" "usb_cdc.bin" ; # checksum -p LPC1549 -d "usb_cdc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19440	   2220	   1632	  23292	   5afc	usb_cdc.axf
+ 
+10:36:45 **** Incremental Build of configuration Debug for project usb_cdc ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:38:48 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:38:48 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:38:49 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:38:49 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+Building target: usb_cdcMdraw.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdcMdraw.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdcMdraw.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdcMdraw.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       20812 B       256 KB      7.94%
+         Ram0_16:        3820 B        16 KB     23.32%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdcMdraw.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdcMdraw.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdcMdraw.axf" "usb_cdcMdraw.bin" ; # checksum -p LPC1549 -d "usb_cdcMdraw.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18616	   2196	   1624	  22436	   57a4	usb_cdcMdraw.axf
+ 
+10:38:51 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:43:53 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:43:54 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:43:54 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+Building file: ../src/FreeRTOSCommonHooks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -DCR_PRINTF_CHAR -D__LPC15XX__ -D__NEWLIB__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"src/FreeRTOSCommonHooks.d" -MT"src/FreeRTOSCommonHooks.o" -MT"src/FreeRTOSCommonHooks.d" -o "src/FreeRTOSCommonHooks.o" "../src/FreeRTOSCommonHooks.c"
+Finished building: ../src/FreeRTOSCommonHooks.c
+ 
+Building file: ../src/croutine.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -DCR_PRINTF_CHAR -D__LPC15XX__ -D__NEWLIB__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"src/croutine.d" -MT"src/croutine.o" -MT"src/croutine.d" -o "src/croutine.o" "../src/croutine.c"
+Finished building: ../src/croutine.c
+ 
+Building file: ../src/event_groups.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -DCR_PRINTF_CHAR -D__LPC15XX__ -D__NEWLIB__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"src/event_groups.d" -MT"src/event_groups.o" -MT"src/event_groups.d" -o "src/event_groups.o" "../src/event_groups.c"
+Finished building: ../src/event_groups.c
+ 
+Building file: ../src/heap_3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -DCR_PRINTF_CHAR -D__LPC15XX__ -D__NEWLIB__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"src/heap_3.d" -MT"src/heap_3.o" -MT"src/heap_3.d" -o "src/heap_3.o" "../src/heap_3.c"
+Finished building: ../src/heap_3.c
+ 
+Building file: ../src/list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -DCR_PRINTF_CHAR -D__LPC15XX__ -D__NEWLIB__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"src/list.d" -MT"src/list.o" -MT"src/list.d" -o "src/list.o" "../src/list.c"
+Finished building: ../src/list.c
+ 
+Building file: ../src/port.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -DCR_PRINTF_CHAR -D__LPC15XX__ -D__NEWLIB__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"src/port.d" -MT"src/port.o" -MT"src/port.d" -o "src/port.o" "../src/port.c"
+Finished building: ../src/port.c
+ 
+Building file: ../src/queue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -DCR_PRINTF_CHAR -D__LPC15XX__ -D__NEWLIB__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"src/queue.d" -MT"src/queue.o" -MT"src/queue.d" -o "src/queue.o" "../src/queue.c"
+Finished building: ../src/queue.c
+ 
+Building file: ../src/tasks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -DCR_PRINTF_CHAR -D__LPC15XX__ -D__NEWLIB__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"src/tasks.d" -MT"src/tasks.o" -MT"src/tasks.d" -o "src/tasks.o" "../src/tasks.c"
+../src/tasks.c:3575:14: warning: 'freertos_tasks_c_additions_init' defined but not used [-Wunused-function]
+  static void freertos_tasks_c_additions_init( void )
+              ^
+Finished building: ../src/tasks.c
+ 
+Building file: ../src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -DCR_PRINTF_CHAR -D__LPC15XX__ -D__NEWLIB__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"src/timers.d" -MT"src/timers.o" -MT"src/timers.d" -o "src/timers.o" "../src/timers.c"
+Finished building: ../src/timers.c
+ 
+Building target: libfreertos.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libfreertos.a"  ./src/FreeRTOSCommonHooks.o ./src/croutine.o ./src/event_groups.o ./src/heap_3.o ./src/list.o ./src/port.o ./src/queue.o ./src/tasks.o ./src/timers.o   
+c:\nxp\MCUXpressoIDE_10.0.2_411\ide\tools\bin\arm-none-eabi-ar.exe: creating libfreertos.a
+Finished building target: libfreertos.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libfreertos.a" ; # arm-none-eabi-objdump -h -S "libfreertos.a" >"libfreertos.lss"
+   text	   data	    bss	    dec	    hex	filename
+     96	      0	      0	     96	     60	FreeRTOSCommonHooks.o (ex libfreertos.a)
+   1056	      0	    128	   1184	    4a0	croutine.o (ex libfreertos.a)
+   1068	      0	      0	   1068	    42c	event_groups.o (ex libfreertos.a)
+     72	      0	      0	     72	     48	heap_3.o (ex libfreertos.a)
+    356	      0	      0	    356	    164	list.o (ex libfreertos.a)
+    536	      4	      0	    540	    21c	port.o (ex libfreertos.a)
+   2592	      0	     80	   2672	    a70	queue.o (ex libfreertos.a)
+   5572	      4	    320	   5896	   1708	tasks.o (ex libfreertos.a)
+      0	      0	      0	      0	      0	timers.o (ex libfreertos.a)
+ 
+10:43:58 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+Building file: ../src/Fmutex.cpp
+Building file: ../src/cdc_main.c
+Building file: ../src/usb_cdcMdraw.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/Fmutex.d" -MT"src/Fmutex.o" -MT"src/Fmutex.d" -o "src/Fmutex.o" "../src/Fmutex.cpp"
+Invoking: MCU C Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-gcc -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/cdc_main.d" -MT"src/cdc_main.o" -MT"src/cdc_main.d" -o "src/cdc_main.o" "../src/cdc_main.c"
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/usb_cdcMdraw.d" -MT"src/usb_cdcMdraw.o" -MT"src/usb_cdcMdraw.d" -o "src/usb_cdcMdraw.o" "../src/usb_cdcMdraw.cpp"
+Finished building: ../src/Fmutex.cpp
+Finished building: ../src/cdc_main.c
+ 
+ 
+../src/usb_cdcMdraw.cpp: In function 'void send_task(void*)':
+../src/usb_cdcMdraw.cpp:63:8: warning: unused variable 'str' [-Wunused-variable]
+   char str[32];
+        ^
+Finished building: ../src/usb_cdcMdraw.cpp
+ 
+Building target: usb_cdcMdraw.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdcMdraw.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdcMdraw.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdcMdraw.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       19304 B       256 KB      7.36%
+         Ram0_16:        3764 B        16 KB     22.97%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdcMdraw.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdcMdraw.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdcMdraw.axf" "usb_cdcMdraw.bin" ; # checksum -p LPC1549 -d "usb_cdcMdraw.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17108	   2196	   1568	  20872	   5188	usb_cdcMdraw.axf
+ 
+10:44:00 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:52:19 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:52:19 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:52:20 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:52:20 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+Building file: ../src/usb_cdcMdraw.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/usb_cdcMdraw.d" -MT"src/usb_cdcMdraw.o" -MT"src/usb_cdcMdraw.d" -o "src/usb_cdcMdraw.o" "../src/usb_cdcMdraw.cpp"
+../src/usb_cdcMdraw.cpp: In function 'void send_task(void*)':
+../src/usb_cdcMdraw.cpp:62:8: warning: unused variable 'str' [-Wunused-variable]
+   char str[32];
+        ^
+../src/usb_cdcMdraw.cpp:60:7: warning: unused variable 'LedState' [-Wunused-variable]
+  bool LedState = false;
+       ^
+Finished building: ../src/usb_cdcMdraw.cpp
+ 
+Building target: usb_cdcMdraw.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdcMdraw.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdcMdraw.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdcMdraw.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       19352 B       256 KB      7.38%
+         Ram0_16:        3768 B        16 KB     23.00%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdcMdraw.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdcMdraw.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdcMdraw.axf" "usb_cdcMdraw.bin" ; # checksum -p LPC1549 -d "usb_cdcMdraw.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17156	   2196	   1572	  20924	   51bc	usb_cdcMdraw.axf
+ 
+10:52:22 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+10:58:50 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+10:58:51 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:58:51 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+10:58:52 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+Building file: ../src/usb_cdcMdraw.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/usb_cdcMdraw.d" -MT"src/usb_cdcMdraw.o" -MT"src/usb_cdcMdraw.d" -o "src/usb_cdcMdraw.o" "../src/usb_cdcMdraw.cpp"
+../src/usb_cdcMdraw.cpp: In function 'void send_task(void*)':
+../src/usb_cdcMdraw.cpp:62:8: warning: unused variable 'str' [-Wunused-variable]
+   char str[32];
+        ^
+../src/usb_cdcMdraw.cpp:60:7: warning: unused variable 'LedState' [-Wunused-variable]
+  bool LedState = false;
+       ^
+Finished building: ../src/usb_cdcMdraw.cpp
+ 
+Building target: usb_cdcMdraw.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdcMdraw.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdcMdraw.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdcMdraw.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       19352 B       256 KB      7.38%
+         Ram0_16:        3768 B        16 KB     23.00%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdcMdraw.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdcMdraw.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdcMdraw.axf" "usb_cdcMdraw.bin" ; # checksum -p LPC1549 -d "usb_cdcMdraw.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17156	   2196	   1572	  20924	   51bc	usb_cdcMdraw.axf
+ 
+10:58:54 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+11:02:47 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+11:02:48 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:02:48 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+11:02:49 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+Building file: ../src/usb_cdcMdraw.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/usb_cdcMdraw.d" -MT"src/usb_cdcMdraw.o" -MT"src/usb_cdcMdraw.d" -o "src/usb_cdcMdraw.o" "../src/usb_cdcMdraw.cpp"
+../src/usb_cdcMdraw.cpp: In function 'void send_task(void*)':
+../src/usb_cdcMdraw.cpp:62:8: warning: unused variable 'str' [-Wunused-variable]
+   char str[32];
+        ^
+../src/usb_cdcMdraw.cpp:60:7: warning: unused variable 'LedState' [-Wunused-variable]
+  bool LedState = false;
+       ^
+Finished building: ../src/usb_cdcMdraw.cpp
+ 
+Building target: usb_cdcMdraw.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdcMdraw.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdcMdraw.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdcMdraw.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       19340 B       256 KB      7.38%
+         Ram0_16:        3768 B        16 KB     23.00%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdcMdraw.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdcMdraw.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdcMdraw.axf" "usb_cdcMdraw.bin" ; # checksum -p LPC1549 -d "usb_cdcMdraw.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17144	   2196	   1572	  20912	   51b0	usb_cdcMdraw.axf
+ 
+11:02:51 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+11:03:07 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+11:03:08 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:03:08 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+11:03:09 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+11:03:10 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+09:05:19 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+09:05:20 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+09:05:20 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+09:05:22 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+Building file: ../src/usb_cdcMdraw.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdcMdraw\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/usb_cdcMdraw.d" -MT"src/usb_cdcMdraw.o" -MT"src/usb_cdcMdraw.d" -o "src/usb_cdcMdraw.o" "../src/usb_cdcMdraw.cpp"
+../src/usb_cdcMdraw.cpp: In function 'void send_task(void*)':
+../src/usb_cdcMdraw.cpp:62:8: warning: unused variable 'str' [-Wunused-variable]
+   char str[32];
+        ^
+../src/usb_cdcMdraw.cpp:60:7: warning: unused variable 'LedState' [-Wunused-variable]
+  bool LedState = false;
+       ^
+Finished building: ../src/usb_cdcMdraw.cpp
+ 
+Building target: usb_cdcMdraw.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdcMdraw.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdcMdraw.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdcMdraw.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       19336 B       256 KB      7.38%
+         Ram0_16:        3768 B        16 KB     23.00%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdcMdraw.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdcMdraw.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdcMdraw.axf" "usb_cdcMdraw.bin" ; # checksum -p LPC1549 -d "usb_cdcMdraw.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17140	   2196	   1572	  20908	   51ac	usb_cdcMdraw.axf
+ 
+09:05:25 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+09:10:24 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+09:10:25 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+09:10:26 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+09:10:27 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+09:10:28 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+13:41:09 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:41:09 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:41:11 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+13:41:13 **** Build of configuration Debug for project usb_cdc602 ****
+make -r -j4 all 
+Building file: ../src/cdc_main.c
+Building file: ../src/usb_cdc602.cpp
+Building file: ../src/Fmutex.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdc602\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/usb_cdc602.d" -MT"src/usb_cdc602.o" -MT"src/usb_cdc602.d" -o "src/usb_cdc602.o" "../src/usb_cdc602.cpp"
+Invoking: MCU C++ Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-c++ -std=c++11 -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdc602\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/Fmutex.d" -MT"src/Fmutex.o" -MT"src/Fmutex.d" -o "src/Fmutex.o" "../src/Fmutex.cpp"
+arm-none-eabi-gcc -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\usb_cdc602\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\inc" -I"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\inc\usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/cdc_main.d" -MT"src/cdc_main.o" -MT"src/cdc_main.d" -o "src/cdc_main.o" "../src/cdc_main.c"
+Finished building: ../src/cdc_main.c
+Finished building: ../src/Fmutex.cpp
+ 
+ 
+../src/usb_cdc602.cpp: In function 'void RIT_start(int, int)':
+../src/usb_cdc602.cpp:296:62: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+  sprintf(debugStr, "cmp_value = %d \r\n", (uint32_t)cmp_value);
+                                                              ^
+../src/usb_cdc602.cpp: In function 'void receive_task(void*)':
+../src/usb_cdc602.cpp:407:96: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+       sprintf(debug, "New: Dir: %d, Amount: %d \r\n", createTask->direction, createTask->amount);
+                                                                                                ^
+../src/usb_cdc602.cpp:419:96: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+       sprintf(debug, "New: Dir: %d, Amount: %d \r\n", createTask->direction, createTask->amount);
+                                                                                                ^
+../src/usb_cdc602.cpp:342:12: warning: unused variable 'getStr' [-Wunused-variable]
+  char      getStr[60] = "\n";
+            ^
+../src/usb_cdc602.cpp:347:8: warning: unused variable 'goSlice' [-Wunused-variable]
+  char *goSlice;
+        ^
+../src/usb_cdc602.cpp: In function 'void ExecuteQTask(void*)':
+../src/usb_cdc602.cpp:485:124: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      sprintf(debug, "queue: Got item: Dir: %d, Amount: %d , Pulse: %d \r\n", readTask->direction, readTask->amount, pulsePS);
+                                                                                                                            ^
+../src/usb_cdc602.cpp:485:124: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+Finished building: ../src/usb_cdc602.cpp
+ 
+Building target: usb_cdc602.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdc602.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdc602.axf"  ./src/DigitalIOPin.o ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdc602.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       41952 B       256 KB     16.00%
+      Ram0_16_32:        4176 B        32 KB     12.74%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdc602.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdc602.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdc602.axf" "usb_cdc602.bin" ; # checksum -p LPC1549 -d "usb_cdc602.bin";
+   text	   data	    bss	    dec	    hex	filename
+  39392	   2560	   1616	  43568	   aa30	usb_cdc602.axf
+ 
+13:41:17 **** Incremental Build of configuration Debug for project usb_cdc602 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+13:42:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:42:12 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:42:13 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+13:42:14 **** Incremental Build of configuration Debug for project usb_cdc602 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+13:42:15 **** Incremental Build of configuration Debug for project usb_cdc602 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+23:34:53 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1549 ****
+make -r all 
+make: Nothing to be done for `all'.
+23:34:55 **** Incremental Build of configuration Debug for project lpc_chip_15xx ****
+make -r all 
+make: Nothing to be done for `all'.
+23:34:56 **** Incremental Build of configuration Debug for project freertos ****
+make -r all 
+make: Nothing to be done for `all'.
+23:34:57 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+Building target: usb_cdcMdraw.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="usb_cdcMdraw.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "usb_cdc_Debug.ld" -o "usb_cdcMdraw.axf"  ./src/Fmutex.o ./src/ITM_write.o ./src/cdc_desc.o ./src/cdc_main.o ./src/cdc_vcom.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/sysinit.o ./src/usb_cdcMdraw.o   -lfreertos -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       19336 B       256 KB      7.38%
+         Ram0_16:        3768 B        16 KB     23.00%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: usb_cdcMdraw.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "usb_cdcMdraw.axf"; # arm-none-eabi-objcopy -v -O binary "usb_cdcMdraw.axf" "usb_cdcMdraw.bin" ; # checksum -p LPC1549 -d "usb_cdcMdraw.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17140	   2196	   1572	  20908	   51ac	usb_cdcMdraw.axf
+ 
+23:35:01 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.

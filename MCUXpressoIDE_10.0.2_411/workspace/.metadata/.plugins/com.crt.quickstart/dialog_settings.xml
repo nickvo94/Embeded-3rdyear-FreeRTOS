@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\Nick\Downloads\usb_cdc.zip"/>
+			<item value="C:\Users\Nick\Downloads\freertos8.zip"/>
+			<item value="C:\nxp\MCUXpressoIDE_10.0.2_411\ide\Examples\LPCOpen\lpcopen_2_20_lpcxpresso_nxp_lpcxpresso_1549.zip"/>
+		</list>
+	</section>
+	<section name="com.crt.quickstart.views.wizards.examples.QSExampleSelectionPage">
+		<item value="C:\Users\Nick\Downloads" key="dirname"/>
+	</section>
+</section>

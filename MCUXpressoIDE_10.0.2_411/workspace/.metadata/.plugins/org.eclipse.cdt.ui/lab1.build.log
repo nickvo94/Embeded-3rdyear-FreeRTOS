@@ -1,0 +1,21 @@
+12:11:05 **** Build of configuration Debug for project lab1 ****
+make -r -j4 all 
+Building target: lab1.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\lpc_chip_15xx\Debug" -L"C:\Users\Nick\Documents\MCUXpressoIDE_10.0.2_411\workspace\freertos\Debug" -Xlinker -Map="lab1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab1_Debug.ld" -o "lab1.axf"  ./src/DigitalIOPin.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/lab1.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx -lfreertos
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       34672 B       256 KB     13.23%
+         Ram0_16:        2892 B        16 KB     17.65%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: lab1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "lab1.axf"; # arm-none-eabi-objcopy -v -O binary "lab1.axf" "lab1.bin" ; # checksum -p LPC1549 -d "lab1.bin";
+   text	   data	    bss	    dec	    hex	filename
+  32192	   2480	    412	  35084	   890c	lab1.axf
+ 
+
+12:11:06 Build Finished (took 521ms)
+

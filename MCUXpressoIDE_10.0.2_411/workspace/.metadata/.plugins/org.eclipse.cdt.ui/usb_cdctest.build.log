@@ -1,0 +1,6 @@
+21:33:31 **** Incremental Build of configuration Debug for project usb_cdctest ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+
+21:33:31 Build Finished (took 140ms)
+

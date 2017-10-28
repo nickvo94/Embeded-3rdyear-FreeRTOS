@@ -1,0 +1,6 @@
+23:35:01 **** Incremental Build of configuration Debug for project usb_cdcMdraw ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+
+23:35:01 Build Finished (took 150ms)
+

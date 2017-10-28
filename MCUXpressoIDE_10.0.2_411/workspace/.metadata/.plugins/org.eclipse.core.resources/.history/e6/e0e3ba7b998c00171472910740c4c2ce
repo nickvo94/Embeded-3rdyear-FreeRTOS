@@ -1,0 +1,149 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#if defined (__USE_LPCOPEN)
+#if defined(NO_BOARD_LIB)
+#include "chip.h"
+#else
+#include "board.h"
+#endif
+#endif
+
+#include "DigitalIOPin.h"
+#include <cr_section_macros.h>
+#include <mutex>
+#include "syslog.h"
+#include <atomic>
+#include <string>
+#include <stdlib.h>
+using namespace std;
+// TODO: insert other include files here
+
+// TODO: insert other definitions and declarations here
+
+#include "FreeRTOS.h"
+#include "task.h"
+#include <semphr.h>
+
+//std::atomic<int>  questions (0);
+//std::atomic<bool> newInput  (false);
+SemaphoreHandle_t keepAsking;
+SemaphoreHandle_t countingSemaphore;
+// Old: delete these:
+// std::atomic<bool> cont (false);
+// std::atomic<bool> oraFin (false);
+
+static void prvSetupHardware(void)
+{
+	SystemCoreClockUpdate();
+	Board_Init();
+
+	/* Initial LED0 state is off */
+	Board_LED_Set(0, false);
+}
+
+Syslog logger = Syslog();
+
+static void vAnswerTask(void *pvParameters) {
+	int ansNum;
+	//const char temp;
+	std::string oracle[6] = {"You will meet a tall dark stranger", "Why would you go there ?",
+	"No need to worry", " It will happen once or twice", "You should choose the 3rd one", "On Thursday, you will see" };
+		while (1) {
+			if(xSemaphoreTake(countingSemaphore, portMAX_DELAY) != NULL){
+				//questions--;
+				ansNum = rand()%6;
+				logger.write("\n\r[Oracle]: ");
+				logger.write("Hmmm...\n\r");
+				//newInput = true;
+				xSemaphoreGive(keepAsking);
+				vTaskDelay(3000);
+				logger.write("\n\r[Oracle]: ");
+				//temp = oracle[ansNum];
+				logger.write(oracle[ansNum].c_str());
+				logger.write("\r\n");
+				xSemaphoreGive(keepAsking);
+				//newInput = true;
+				vTaskDelay(2000);
+			}
+
+		}
+}
+
+static void vQuestionTask(void *pvParameters) {
+	char inChar;
+	int count = 0;
+	//bool detectq = false;
+	//bool keepAsking = false;
+	logger.write("[You]: ");
+	while (1) {
+		inChar = Board_UARTGetChar();
+		if(xSemaphoreTake(keepAsking, portMAX_DELAY) != NULL){
+			logger.write("[You]: ");
+			xSemaphoreGive(keepAsking);
+			//newInput = false;
+		}
+		if ((inChar > 7) && (inChar < 128))
+		{
+			count++;
+			logger.writeChar(inChar);
+			if(inChar == 63){
+				//detectq = true;
+				xSemaphoreGive(countingSemaphore);
+			}
+			if(count == 60 || inChar == 10 || inChar == 13 ){
+				count = 0;
+				logger.write("\r\n");
+				xSemaphoreGive(keepAsking);
+
+				//newInput = true;
+				//if(detectq == true){
+					//questions++;
+					//detectq = false;
+				//}
+			}
+
+		}
+	}
+}
+
+
+extern "C" {
+
+void vConfigureTimerForRunTimeStats( void ) {
+	Chip_SCT_Init(LPC_SCTSMALL1);
+	LPC_SCTSMALL1->CONFIG = SCT_CONFIG_32BIT_COUNTER;
+	LPC_SCTSMALL1->CTRL_U = SCT_CTRL_PRE_L(255) | SCT_CTRL_CLRCTR_L; // set prescaler to 256 (255 + 1), and start timer
+	}
+
+}
+
+int main(void)
+{
+	prvSetupHardware();
+	countingSemaphore = xSemaphoreCreateCounting(10, 0);
+	keepAsking = xSemaphoreCreateBinary();
+
+	//DEBUGOUT("Start \r\n");
+	logger.write("Started: \r\n");
+
+	xTaskCreate(vAnswerTask, "vTaskAnswer",
+				configMINIMAL_STACK_SIZE +128 , NULL, (tskIDLE_PRIORITY + 1UL),
+				(TaskHandle_t *) NULL);
+
+	xTaskCreate(vQuestionTask, "vTaskQuestion",
+					configMINIMAL_STACK_SIZE +128 , NULL, (tskIDLE_PRIORITY + 1UL),
+					(TaskHandle_t *) NULL);
+
+	vTaskStartScheduler();
+
+
+	return 1;
+}

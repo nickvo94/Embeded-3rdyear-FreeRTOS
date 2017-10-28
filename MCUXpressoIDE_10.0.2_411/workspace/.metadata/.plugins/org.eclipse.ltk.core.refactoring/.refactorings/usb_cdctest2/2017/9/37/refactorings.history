@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;usb_cdctest2/src/usb_cdctest.cpp&apos; to &apos;usb_cdctest2.cpp&apos;" description="Rename resource &apos;usb_cdctest.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/usb_cdctest.cpp" name="usb_cdctest2.cpp" stamp="1505215831728" updateReferences="true"/>
+</session>
